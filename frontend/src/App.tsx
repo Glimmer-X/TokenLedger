@@ -203,7 +203,7 @@ function Dashboard({ session, chrome, onSignedOut }: { session: Session; chrome:
               <ActivityPanel daily={data.daily} t={t} lang={lang} className={hasQuota ? "c7" : "c12"} />
               <DailyTokensPanel daily={data.daily} t={t} lang={lang} className="c8" />
               <WeeklyCostPanel daily={data.daily} t={t} className="c4" />
-              <MachinesPanel usage={data.machines} t={t} lang={lang} className="c12" />
+              <MachinesPanel view={data} t={t} lang={lang} className="c12" />
               <ModelsPanel models={data.models} t={t} lang={lang} className="c7" />
               <SourcesPanel status={data.status} summary={data.summary} t={t} lang={lang} className="c5" />
             </main>
