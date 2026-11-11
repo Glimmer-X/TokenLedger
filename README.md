@@ -111,7 +111,7 @@ Each machine gets its own token; remove one in the web dashboard's account menu 
 | `scripts/dashboard.sh logs` | Log of the current (or last) run |
 | `scripts/dashboard.sh run` | Run in this terminal instead; Ctrl+C stops it |
 
-The server is detached from the terminal that started it and keeps running until you stop it: `stop` or `restart`, Ctrl+C in `run` mode, or logging out or shutting down. Each reason is written to the log. While the Mac sleeps it pauses, and it carries on after wake. It listens on 127.0.0.1 only. While it runs it also captures by itself every hour (`auto_capture_minutes` in the settings; 0 turns it off), and when the machine is signed in to a cloud ledger it syncs every 10 minutes.
+The server is detached from the terminal that started it (on macOS launchd runs it, so quitting the app that started it, such as an editor or Claude, leaves it running) and keeps running until you stop it: `stop` or `restart`, Ctrl+C in `run` mode, or logging out or shutting down. Each reason is written to the log. While the Mac sleeps it pauses, and it carries on after wake. It listens on 127.0.0.1 only. While it runs it also captures by itself every hour (`auto_capture_minutes` in the settings; 0 turns it off), and when the machine is signed in to a cloud ledger it syncs every 10 minutes.
 
 The header shows when every source last succeeded. When a source fails, the header shows a red notice until that source succeeds again, and the Sources panel shows the error.
 
